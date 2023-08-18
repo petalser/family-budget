@@ -1,10 +1,10 @@
-<h1> Family Bud<strong>jet</strong></h1>
+<h1> Family Bud<strong>JET</strong></h1>
 <p>Work in progress...</p>
 
 <p>Features:</p>
 <ul>
-   <li>__React__ (Vite, TypeScript)</li>
-   <li>__Redux Toolkit__ for state management</li>
-   <li>__Recharts__ for doughnut chart</li>
-   <li>__React Styled Components__ for styles</li>
+   <li>*React* (Vite, TypeScript)</li>
+   <li>*Redux Toolkit* for state management</li>
+   <li>*Recharts* for doughnut chart</li>
+   <li>*React Styled Components* for styles</li>
 </ul>
