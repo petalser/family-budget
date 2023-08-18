@@ -1,4 +1,4 @@
-<h1> Family Bud__jet__</h1>
+<h1> Family Bud<strong>jet</strong></h1>
 <p>Work in progress...</p>
 
 <p>Features:</p>
