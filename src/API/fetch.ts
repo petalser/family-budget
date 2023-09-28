@@ -4,13 +4,12 @@ import axios from "axios";
 const endpoint: string = `https://${TOKEN}.mockapi.io/endpoint`;
 
 export type ItemType = {
-  benefit: boolean,
-  category: string,
-  subcategory: string,
+  title: string,
   price: number,
+  category: string,
+  benefit: boolean,
   createdAt: string,
   id: number,
-  title: string,
 }
 
 const fetchData = async (): Promise<ItemType[]>=> {

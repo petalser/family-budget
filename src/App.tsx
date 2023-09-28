@@ -1,10 +1,11 @@
-import Button from "./components/Button";
+import Button from "./styled/Button.styled";
+import Donut from "./styled/Donut.styled";
 import { GlobalStyle } from "./styled/Global";
-import { Donut } from "./components/Donut";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./hooks";
 import fetchData from "./API/fetch";
 import { DataSet, init } from "./features/data";
+import Form from "./styled/Form.styled";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -23,8 +24,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Button />
-      <Donut />
+      <div className="leftside">
+        <Button />
+        <Form labels={["name", "price"]} />
+      </div>
+      <div className="rightside">
+        <Donut />
+      </div>
     </>
   );
 }

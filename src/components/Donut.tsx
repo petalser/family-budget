@@ -1,10 +1,8 @@
-import React from "react";
-import { PieChart, Pie, Cell, Tooltip } from "recharts";
-import { DonutSTL } from "../styled/Donut.styled";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { useAppSelector } from "../hooks";
 import { DataSet } from "../features/data";
 
-export const Donut: React.FC = () => {
+const Donut = ({ className }: { classNaeme?: string }) => {
   const allData = useAppSelector<DataSet>((state) => state.data);
 
   const data = [
@@ -34,17 +32,17 @@ export const Donut: React.FC = () => {
   const sector: number = Math.floor(360 / data.length);
   const colors: string[] = [];
   for (let i = 0; i < data.length; i++) {
-    colors.push(`hsl(${i * sector}, 80%, 50%)`);
+    colors.push(`hsl(${i * sector}, 100%, 50%)`);
   }
   return (
-    <DonutSTL>
-      <PieChart width={500} height={500}>
+    <ResponsiveContainer className={className} height={400}>
+      <PieChart>
         <Pie
           data={data}
           dataKey="price"
           outerRadius={150}
           innerRadius={100}
-          fill="#fff"
+          fill="#000"
           label
         >
           {data.map((_, index) => (
@@ -53,6 +51,8 @@ export const Donut: React.FC = () => {
         </Pie>
         <Tooltip />
       </PieChart>
-    </DonutSTL>
+    </ResponsiveContainer>
   );
 };
+
+export default Donut;
